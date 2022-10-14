@@ -1,0 +1,167 @@
+/* for easy focus tracking */
+button:not(:where(.not-default, [data-tippy-root])),
+a:not(:where(.not-default, [data-tippy-root])) {
+  outline: 2px solid transparent;
+  outline-offset: 15px;
+  transition: 0.3s all ease !important;
+}
+button:not(:where(.not-default)):focus,
+a:not(:where(.not-default)):focus {
+  outline-offset: 2px;
+  outline: 2px solid #2d2d2d;
+  border-radius: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply text-dark-300 overflow-x-hidden;
+}
+::-moz-selection {
+  /* Code for Firefox */
+  @apply bg-gray-200;
+}
+
+::selection {
+  @apply bg-gray-200;
+}
+::-webkit-scrollbar {
+  @apply bg-light-300 w-6px h-6px md:w-8px md:h-8px;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-xl transition bg-light-900;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-300;
+}
+::-webkit-scrollbar-track {
+  @apply rounded-xl bg-transparent;
+}
+
+kbd {
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  @apply text-gray-400 bg-light-300;
+}
+kbd:first-of-type {
+  margin-left: 8px;
+}
+
+input[type="text"]:not(:where(.not-default)),
+input[type="url"]:not(:where(.not-default)) {
+  @apply flex items-center rounded-2xl w-full h-10 py-1 md:py-2 px-5 bg-light-300  placeholder-gray-400 outline-none transition ring-3 ring-transparent !focus-within:ring-gray-400;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-active .inner,
+.fade-leave-active .inner {
+  transition: all 0.3s ease-in-out;
+}
+
+.fade-enter-from .inner,
+.fade-leave-to .inner {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.slide-in-right-enter-active,
+.slide-in-right-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-in-right-enter-from,
+.slide-in-right-leave-to {
+  opacity: 0;
+  transform: translateX(300px);
+}
+
+.command-dialog-enter-active,
+.command-dialog-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.command-dialog-enter-from,
+.command-dialog-leave-to {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.prose :where(iframe):not(:where(.not-prose, .not-prose *)) {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* .prose pre {
+  background: #0d0d0d;
+  color: #fff;
+  font-family: "JetBrainsMono", monospace;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+} */
+
+.hljs-comment,
+.hljs-quote {
+  color: #616161;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #f98181;
+}
+
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #fbbc88;
+}
+
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #b9f18d;
+}
+
+.hljs-title,
+.hljs-section {
+  color: #faf594;
+}
+
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #70cff8;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
