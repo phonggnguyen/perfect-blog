@@ -1,0 +1,1 @@
+{"version":3,"file":"home.f624a73a.js","sources":["../../../../pages/user/[siteId]/home.vue"],"sourcesContent":["<script setup lang=\"ts\">\nconst { params } = useRoute()\n</script>\n\n<template>\n  <div>Home for user {{ params.slug }}</div>\n</template>\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AACA,UAAA,EAAA,WAAA;;;;;;;;;;;;"}

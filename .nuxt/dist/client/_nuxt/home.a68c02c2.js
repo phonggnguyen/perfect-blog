@@ -1,0 +1,1 @@
+import{a,ar as o,o as s,e as t,t as r,u as n}from"./entry.0ed1f16f.js";const l=a({__name:"home",setup(u){const{params:e}=o();return(c,m)=>(s(),t("div",null,"Home for user "+r(n(e).slug),1))}});export{l as default};

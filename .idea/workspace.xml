@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d58a1323-2e9e-4ff1-a32d-c27e4be4b139" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +11,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2G6ugd1avNyyGZRHD1CGvCtjAJc" />
   <component name="ProjectViewState">
@@ -25,6 +27,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/bon/Documents/my-workspace/perfect-blog",
     "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -38,6 +41,7 @@
       <updated>1665721466836</updated>
       <workItem from="1665721467930" duration="8000" />
       <workItem from="1665721509617" duration="20000" />
+      <workItem from="1665721535837" duration="293000" />
     </task>
     <servers />
   </component>
