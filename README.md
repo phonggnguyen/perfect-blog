@@ -11,7 +11,7 @@
   </p>
 
   <p align="center"> 
-    <a href="https://keypress.blog/">View Demo</a>
+    <a href="https://perfect-blog.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/zernonia/keypress/issues">Report Bug</a>
     ·
