@@ -4,15 +4,15 @@ import StarterKit from "@tiptap/starter-kit"
 import Underline from "@tiptap/extension-underline"
 import Image from "@tiptap/extension-image"
 import Focus from "@tiptap/extension-focus"
-import Commands from "~~/utils/tiptap/commands"
-import suggestion from "~~/utils/tiptap/suggestion"
-import HardBreak from "~~/utils/tiptap/hardbreak"
-import Code from "~~/utils/tiptap/code"
-import Link from "~~/utils/tiptap/link"
-import Placeholder from "~~/utils/tiptap/placeholder"
-import Upload from "~~/utils/tiptap/upload"
-import Iframe from "~~/utils/tiptap/iframe"
-import Move from "~~/utils/tiptap/move"
+import Commands from "~/utils/tiptap/commands"
+import suggestion from "~/utils/tiptap/suggestion"
+import HardBreak from "~/utils/tiptap/hardbreak"
+import Code from "~/utils/tiptap/code"
+import Link from "~/utils/tiptap/link"
+import Placeholder from "~/utils/tiptap/placeholder"
+import Upload from "~/utils/tiptap/upload"
+import Iframe from "~/utils/tiptap/iframe"
+import Move from "~/utils/tiptap/move"
 
 const props = defineProps<{
   modelValue: string
@@ -47,10 +47,9 @@ const editor = useEditor({
 watch(
   () => props.modelValue,
   (newValue) => {
-    const isSame = editor.value.getHTML() === newValue
+    const isSame = editor.value?.getHTML() === newValue
     if (isSame) return
-
-    editor.value.commands.setContent(newValue, false)
+    editor.value?.commands.setContent(newValue, false)
   }
 )
 </script>

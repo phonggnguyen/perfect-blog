@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Profiles } from "~~/utils/types"
+import { Profiles } from "~/utils/types"
+import { set } from '@vueuse/core'
 
 const client = useSupabaseClient()
 const subdomain = useSubdomain()
@@ -13,7 +14,7 @@ useAsyncData("profile", async () => {
     .or(`username.eq.${subdomain.value}, subdomain.eq.${subdomain.value}`)
     .maybeSingle()
 
-  profile.value = data
+  set(profile, data)
   return data
 })
 

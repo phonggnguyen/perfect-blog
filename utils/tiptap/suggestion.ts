@@ -2,7 +2,7 @@ import type { Editor, Range } from "@tiptap/core"
 import { VueRenderer } from "@tiptap/vue-3"
 import tippy from "tippy.js"
 
-import CommandsList from "~~/components/Tiptap/CommandList.vue"
+import CommandsList from "~/components/Tiptap/CommandList.vue"
 
 interface Command {
   editor: Editor

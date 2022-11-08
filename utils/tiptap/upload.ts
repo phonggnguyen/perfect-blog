@@ -1,6 +1,6 @@
 import { Extension } from "@tiptap/core"
-import ModalImage from "~~/components/Tiptap/ModalImage.vue"
-import ModalIframe from "~~/components/Tiptap/ModalIframe.vue"
+import ModalImage from "~/components/Tiptap/ModalImage.vue"
+import ModalIframe from "~/components/Tiptap/ModalIframe.vue"
 import { createApp } from "vue"
 
 declare module "@tiptap/core" {

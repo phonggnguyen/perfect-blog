@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { stripHtml } from "string-strip-html"
 import slugify from "slugify"
-import { Posts } from "~~/utils/types"
+import { Posts } from "~/utils/types"
 
 const user = useSupabaseUser()
 const client = useSupabaseClient()
@@ -75,12 +75,12 @@ const { pending } = await useAsyncData(
   async () => {
     if (!postId.value) throw Error("no id found")
     const { data } = await client.from<Posts>("posts").select("*").eq("id", postId.value).single()
-    title.value = data.title
-    body.value = data.body
+    title.value = data?.title
+    body.value = data?.body
     settings.value = {
-      image: data.cover_img ?? "",
-      active: data.active ?? false,
-      tags: data.tags ?? [],
+      image: data?.cover_img ?? "",
+      active: data?.active ?? false,
+      tags: data?.tags ?? [],
     }
 
     return data

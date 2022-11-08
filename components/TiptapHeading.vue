@@ -55,11 +55,11 @@ const editor = useEditor({
 watch(
   () => props.modelValue,
   (newValue) => {
-    const title = editor.value.getJSON().content?.[0].content?.[0].text
+    const title = editor.value?.getJSON().content?.[0].content?.[0].text
     const isSame = title === newValue
     if (isSame) return
 
-    editor.value.commands.setContent(newValue, false)
+    editor.value?.commands.setContent(newValue, false)
   }
 )
 </script>

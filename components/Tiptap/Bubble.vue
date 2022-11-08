@@ -12,7 +12,7 @@ const props = defineProps({
 
 type NodeType = "image" | "text" | "video" | "iframe"
 const nodeType = computed<NodeType | undefined>(() => {
-  const selection = props.editor.state.selection as NodeSelection
+  const selection = props.editor?.state.selection as NodeSelection
   const isImage = selection.node?.type.name === "image"
   const isIframe = selection.node?.type.name === "iframe"
   const isText = selection instanceof TextSelection

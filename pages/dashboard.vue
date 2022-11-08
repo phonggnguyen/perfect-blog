@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Profiles } from "~~/utils/types"
+import { Profiles } from "~/utils/types"
 
 const user = useSupabaseUser()
 const client = useSupabaseClient()

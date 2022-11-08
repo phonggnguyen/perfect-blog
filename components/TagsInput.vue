@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Tags } from "~~/utils/types"
+import type { Tags } from "~/utils/types"
 import { PropType } from "vue"
 import Multiselect from "@vueform/multiselect"
 
@@ -12,7 +12,8 @@ const emits = defineEmits(["update:modelValue"])
 const client = useSupabaseClient()
 const { data: tags } = useAsyncData("tags", async () => {
   const { data } = await client.from<Tags>("tags_view").select("*")
-  return data.map((i) => i.name)
+
+  return data ? data.map((i) => i.name) : []
 })
 </script>
 

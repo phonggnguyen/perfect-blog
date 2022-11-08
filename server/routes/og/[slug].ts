@@ -1,9 +1,9 @@
 import { readFileSync } from "fs"
 import { join, resolve } from "path"
 import { serverSupabaseClient } from "#supabase/server"
-import { useUrl } from "~~/composables/url"
+import { useUrl } from "~/composables/url"
 import { Resvg, ResvgRenderOptions } from "@resvg/resvg-js"
-import type { Posts } from "~~/utils/types"
+import type { Posts } from "~/utils/types"
 import satori from "satori"
 
 export default defineEventHandler(async (event) => {

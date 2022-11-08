@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import type { Posts, Tags } from "~~/utils/types"
+import type { Posts, Tags } from "~/utils/types"
 
 const client = useSupabaseClient()
-
 const { data, pending } = useAsyncData("posts", async () => {
   const { data } = await client
     .from<Posts>("posts")
@@ -10,21 +9,23 @@ const { data, pending } = useAsyncData("posts", async () => {
     .eq("active", true)
     .order("created_at", { ascending: false })
 
-  console.log("data", data)
   return data
 })
 
 const { data: tags } = useAsyncData("tags", async () => {
   const { data } = await client.from<Tags>("tags_view").select("*")
 
-  console.log("tags", data)
   return data
 })
 
-useCustomHead("Explore all posts")
 </script>
 
 <template>
+  <Head>
+    <Title>
+      Explore all posts
+    </Title>
+  </Head>
   <div class="my-12">
     <h1 class="text-4xl font-semibold">Posts</h1>
     <div class="flex flex-col-reverse md:flex-row">

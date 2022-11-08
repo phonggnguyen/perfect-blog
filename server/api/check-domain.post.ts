@@ -1,6 +1,6 @@
 //ref: https://github.com/vercel/platforms/blob/main/pages/api/domain/check.ts
 import { serverSupabaseClient } from "#supabase/server"
-import type { Domains } from "~~/utils/types"
+import type { Domains } from "~/utils/types"
 
 export default defineEventHandler(async (event) => {
   try {

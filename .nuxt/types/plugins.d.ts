@@ -8,7 +8,7 @@ type InjectionType<A extends Plugin> = A extends Plugin<infer T> ? Decorate<T> :
 type NuxtAppInjections = 
   InjectionType<typeof import("../components.plugin").default> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin").default> &
-  InjectionType<typeof import("../../node_modules/nuxt/dist/head/runtime/plugin").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/head/runtime/mixin-plugin").default> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/router").default> &
   InjectionType<typeof import("../../node_modules/@nuxt/image-edge/dist/runtime/plugin").default> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/supabase/dist/runtime/plugins/supabase.client").default> &

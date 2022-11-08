@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { useFocusTrap } from "@vueuse/integrations/useFocusTrap"
 
+const el = ref()
 const props = defineProps({ open: Boolean, confirmAction: Function })
 const emits = defineEmits(["update:open"])
-const el = ref()
+
+onKeyStroke("Escape", () => emits("update:open", false))
 
 onClickOutside(el, () => {
   emits("update:open", !props.open)
 })
 const { activate, deactivate } = useFocusTrap(el)
-
-onKeyStroke("Escape", () => emits("update:open", false))
 
 watch(
   () => props.open,

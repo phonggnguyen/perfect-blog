@@ -1,6 +1,6 @@
 // ref: https://github.com/vercel/platforms/blob/main/lib/api/domain.ts
 import { serverSupabaseClient, serverSupabaseUser } from "#supabase/server"
-import type { Domains } from "~~/utils/types"
+import type { Domains } from "~/utils/types"
 
 export default defineEventHandler(async (event) => {
   try {

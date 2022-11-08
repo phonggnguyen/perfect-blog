@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Posts } from "~~/utils/types"
+import type { Posts } from "~/utils/types"
 
 const client = useSupabaseClient()
 const profile = useSubdomainProfile()

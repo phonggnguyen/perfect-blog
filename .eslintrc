@@ -1,5 +1,6 @@
 {
   "extends": [
+    "plugin:prettier/recommended",
     "@nuxtjs/eslint-config-typescript",
     "@antfu"
   ]

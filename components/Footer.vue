@@ -7,7 +7,7 @@ const url = useUrl()
     <footer class="mt-12 py-6 border-t-2 border-light-700 flex flex-col sm:flex-row justify-between">
       <div>
         <NuxtLink class="flex items-center font-bold text-xl text-dark-300" to="/"
-          ><NuxtImg src="/banner.png" class="w-auto h-10 mr-4"></NuxtImg>
+          ><Logo class="w-auto h-10 mr-4"></Logo>
         </NuxtLink>
       </div>
       <div class="mt-4 sm:mt-0 flex text-sm sm:text-base space-x-6">

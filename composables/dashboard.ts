@@ -1,4 +1,4 @@
-import type { Profiles } from "~~/utils/types"
+import type { Profiles } from "~/utils/types"
 import type { Ref } from "vue"
 import { removeVietnameseTones } from "~/utils/functions";
 
@@ -16,11 +16,11 @@ export const useProfileSave = (payload: Ref<Partial<Profiles>>) => {
 
     console.log("save profile settings", payload.value)
     console.log("save profile user", user.value)
-    const isFacebook = user.value.app_metadata.provider === 'facebook'
+    const isFacebook = user.value?.app_metadata.provider === 'facebook'
     console.log({ isFacebook })
     if (isFacebook) {
-      payload.value.avatar_url = user.value.user_metadata.avatar_url
-      payload.value.username = removeVietnameseTones(user.value.user_metadata.name)
+      payload.value.avatar_url = user.value?.user_metadata.avatar_url
+      payload.value.username = removeVietnameseTones(user.value?.user_metadata.name)
           .replaceAll(" ", "")
           .toLowerCase()
     }

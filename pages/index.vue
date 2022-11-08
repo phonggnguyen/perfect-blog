@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { Posts } from "~~/utils/types"
-
-useCustomHead("Experience keyboard-first blogging platform")
+import { Posts } from "~/utils/types"
 
 const client = useSupabaseClient()
 const { data, pending } = useAsyncData(
@@ -30,6 +28,11 @@ watch(Slash, (n) => {
 </script>
 
 <template>
+  <Head>
+    <Title>
+      Experience keyboard-first blogging platform
+    </Title>
+  </Head>
   <div class="pb-20">
     <div class="relative my-20 md:my-30 text-center">
       <div class="z-100">

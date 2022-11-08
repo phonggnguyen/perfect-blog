@@ -2,8 +2,8 @@ import transformerDirective from "@unocss/transformer-directives"
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ["@unocss/nuxt", "@nuxtjs/supabase", "@vueuse/nuxt", "@nuxt/image-edge", "~~/modules/og"],
-  css: ["@unocss/reset/tailwind.css", "~~/assets/main.css"],
+  modules: ["@unocss/nuxt", "@nuxtjs/supabase", "@vueuse/nuxt", "@nuxt/image-edge", "~/modules/og"],
+  css: ["@unocss/reset/tailwind.css", "~/assets/main.css"],
   runtimeConfig: {
     public: {
       UMAMI_WEBSITE_ID: process.env.UMAMI_WEBSITE_ID,
@@ -52,7 +52,7 @@ export default defineNuxtConfig({
     // core options
     shortcuts: [
       {
-        btn: " text-sm md:text-base font-medium rounded-2xl py-2 px-4 transition ring-3 ring-transparent disabled:opacity-50 relative inline-flex justify-center items-center shadow-none",
+        btn: "text-sm md:text-base font-medium rounded-2xl py-2 px-4 transition ring-3 ring-transparent disabled:opacity-50 relative inline-flex justify-center items-center shadow-none",
         "btn-plain": "btn font-semibold text-gray-400 focus:text-dark-50 hover:text-dark-50",
         "btn-primary": "btn bg-dark-300 text-white focus:ring-gray-400 focus:shadow-xl",
         "btn-secondary": "btn bg-white hover:bg-gray-100 focus:ring-gray-100",
