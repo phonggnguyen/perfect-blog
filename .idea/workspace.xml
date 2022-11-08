@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d58a1323-2e9e-4ff1-a32d-c27e4be4b139" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/router.options.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.options.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Drawer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Drawer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Tiptap.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Tiptap.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/posts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/posts.vue" afterDir="false" />
-    </list>
+    <list default="true" id="d58a1323-2e9e-4ff1-a32d-c27e4be4b139" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

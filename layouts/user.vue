@@ -12,7 +12,7 @@ const user = useSupabaseUser()
 
         <div class="flex items-center">
           <Command class="mr-4"></Command>
-          <NuxtLink rel="noopener" :to="`https://perfect-blog.vercel.app/login`" v-if="!user">Login</NuxtLink>
+          <NuxtLink rel="noopener" :to="`https://.meetruyen.com/login`" v-if="!user">Login</NuxtLink>
           <div>
             <NuxtImg
               v-if="user?.user_metadata?.avatar_url"
