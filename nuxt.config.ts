@@ -68,6 +68,6 @@ export default defineNuxtConfig({
     transpile: ["@tiptap/extension-link", "@tiptap/extension-placeholder", "@tiptap/extension-document"],
   },
   nitro: {
-    preset: "vercel",
+    // preset: "vercel",
   },
 })

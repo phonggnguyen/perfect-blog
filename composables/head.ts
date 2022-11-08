@@ -21,12 +21,12 @@ export const useCustomHead = (
         content:
           description ?? "An open-source blogging platform + free custom domains. Powered by Nuxt 3, Supabase & Vercel",
       },
-      { name: "twitter:image", content: image ?? "https://meetruyen.com/og.png" },
+      { name: "twitter:image", content: image ?? "https://perfect-blog.vercel.app/og.png" },
       { property: "og:type", content: "website" },
       { property: "og:title", content: title ?? "KBlog | Write your blog with keyboard only experience" },
-      { property: "og:url", content: "https://meetruyen.com/" },
-      { property: "og:image", content: image ?? "https://meetruyen.com/og.png" },
-      { property: "og:image:secure_url", content: image ?? "https://meetruyen.com/og.png" },
+      { property: "og:url", content: "https://perfect-blog.vercel.app/" },
+      { property: "og:image", content: image ?? "https://perfect-blog.vercel.app/og.png" },
+      { property: "og:image:secure_url", content: image ?? "https://perfect-blog.vercel.app/og.png" },
       { property: "og:image:type", content: "image/png" },
       {
         property: "og:description",

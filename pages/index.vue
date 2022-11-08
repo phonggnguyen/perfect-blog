@@ -12,7 +12,7 @@ const { data, pending } = useAsyncData(
       .order("created_at", { ascending: false })
     return data
   },
-  { lazy: true }
+  { lazy: true, server: false }
 )
 
 const writeEl = ref()

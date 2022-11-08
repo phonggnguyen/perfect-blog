@@ -11,7 +11,7 @@
   </p>
 
   <p align="center"> 
-    <a href="https://meetruyen.com/">View Demo</a>
+    <a href="https://perfect-blog.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/phonggnguyen/perfect-blog/issues">Report Bug</a>
     ·
