@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
     return await sendRedirect(
       event,
       referrer +
-        `#access_token=${accessToken}&expires_in=604800&provider_token=${process.env.GITHUB_PROVIDER_TOKEN}&refresh_token=${refreshToken}&token_type=bearer`,
+        `#access_token=${accessToken}&expires_in=604800&provider_token=${process.env.FB_PROVIDER_TOKEN}&refresh_token=${refreshToken}&token_type=bearer`,
       302
     )
   }
