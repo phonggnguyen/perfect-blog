@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
       createError({ statusCode: 400, statusMessage: "Bad request. Query parameters are not valid." })
 
     const { data: domainData } = await client.from<Domains>("domains").select("*").eq("url", domain).maybeSingle()
-    if (domainData.user_id === user.id) return true
+    if (domainData?.user_id === user.id) return true
 
     const data = (await $fetch(`https://api.vercel.com/v9/projects/${process.env.VERCEL_PROJECT_ID}/domains`, {
       method: "POST",
@@ -23,6 +23,7 @@ export default defineEventHandler(async (event) => {
         name: domain,
       },
     })) as any
+
     console.log({ domain, data })
     // Domain is already owned by another team but you can request delegation to access it
     if (data.error?.code === "forbidden") return createError({ statusCode: 400, statusMessage: data.error.code })
