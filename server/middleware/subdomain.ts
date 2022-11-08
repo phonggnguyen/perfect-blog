@@ -1,7 +1,7 @@
 export default defineEventHandler(({ req, res, context }) => {
-  const hostname = req.headers.host || "perfect-blog.vercel.app"
+  const hostname = req.headers.host || "meetoon.co"
 
-  const mainDomain = ["localhost:3000", "perfect-blog.vercel.app"]
+  const mainDomain = ["localhost:3000", "meetoon.co"]
 
   console.log("hostname", hostname)
   if (!mainDomain.includes(hostname)) {
