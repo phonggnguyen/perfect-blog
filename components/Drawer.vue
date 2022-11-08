@@ -4,6 +4,7 @@ import { useFocusTrap } from "@vueuse/integrations/useFocusTrap"
 const props = defineProps({ open: Boolean, confirmAction: Function })
 const emits = defineEmits(["update:open"])
 const el = ref()
+
 onClickOutside(el, () => {
   emits("update:open", !props.open)
 })
@@ -16,6 +17,7 @@ watch(
   (n) => nextTick(() => (n ? activate() : deactivate())),
   { immediate: true }
 )
+
 </script>
 
 <template>

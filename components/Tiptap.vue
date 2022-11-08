@@ -4,7 +4,6 @@ import StarterKit from "@tiptap/starter-kit"
 import Underline from "@tiptap/extension-underline"
 import Image from "@tiptap/extension-image"
 import Focus from "@tiptap/extension-focus"
-
 import Commands from "~~/utils/tiptap/commands"
 import suggestion from "~~/utils/tiptap/suggestion"
 import HardBreak from "~~/utils/tiptap/hardbreak"

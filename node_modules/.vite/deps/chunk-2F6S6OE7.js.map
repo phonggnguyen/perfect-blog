@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["external:vue-demi"],
+  "sourcesContent": ["export * from \"vue-demi\""],
+  "mappings": ";;;;;AAAA;AAAA;AAAA,+BAAc;",
+  "names": []
+}

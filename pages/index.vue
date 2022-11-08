@@ -49,22 +49,6 @@ watch(Slash, (n) => {
         </div>
       </div>
     </div>
-
-    <NuxtLink to="https://github.com/zernonia/keypress" target="_blank" class="w-full relative block">
-      <NuxtImg
-        style="object-position: 0 20%"
-        class="w-full h-60 md:h-80 object-cover rounded-2xl"
-        src="https://images.unsplash.com/photo-1665049420194-8f562db50cbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-        alt=""
-      />
-      <h3
-        class="absolute left-4 md:left-1/2 top-8 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:text-3xl font-semibold flex flex-wrap items-center"
-      >
-        <div class="i-mdi-github mr-2"></div>
-        Nuxt 3 + Supabase + Vercel
-      </h3>
-    </NuxtLink>
-
     <h2 class="mt-20 text-4xl font-bold">Posts</h2>
     <Loader v-if="pending"></Loader>
     <ul v-else class="mt-4">

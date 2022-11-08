@@ -17,6 +17,7 @@ export default <RouterOptions>{
       return userRouteMapped
     }
   },
+
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
     if (to.hash) {

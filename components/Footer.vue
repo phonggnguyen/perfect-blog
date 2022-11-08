@@ -29,7 +29,7 @@ const url = useUrl()
           <li class="py-0.5">
             <NuxtLink
               class="text-gray-400 hover:text-dark-300 transition"
-              to="https://github.com/zernonia/keypress"
+              to="https://github.com/phonggnguyen/perfect-blog"
               target="_blank"
               >GitHub</NuxtLink
             >

@@ -16,6 +16,8 @@ const { data, pending } = useAsyncData("posts", async () => {
 
 const { data: tags } = useAsyncData("tags", async () => {
   const { data } = await client.from<Tags>("tags_view").select("*")
+
+  console.log("tags", data)
   return data
 })
 

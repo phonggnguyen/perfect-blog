@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <a href="https://github.com/zernonia/keypress">
+  <a href="https://github.com/phonggnguyen/perfect-blog">
     <img src="public/logo.svg" alt="KeyPress's Logo" width="80">
   </a>
   <br />
@@ -13,9 +13,9 @@
   <p align="center"> 
     <a href="https://perfect-blog.vercel.app/">View Demo</a>
     ·
-    <a href="https://github.com/zernonia/keypress/issues">Report Bug</a>
+    <a href="https://github.com/phonggnguyen/perfect-blog/issues">Report Bug</a>
     ·
-    <a href="https://github.com/zernonia/keypress/issues">Request Feature</a>
+    <a href="https://github.com/phonggnguyen/perfect-blog/issues">Request Feature</a>
   </p>
 </p>
 
@@ -31,9 +31,9 @@ I always wanted to build a multi-tenant platform using [Nuxt3](https://v3.nuxtjs
 
 If you are interested to implement the same, checkout
 
-1. [`server/middleware/subdomain.ts`](https://github.com/zernonia/keypress/blob/main/server/middleware/subdomain.ts) - check the current domain and set srr context.
-2. [`app/router.option.ts`](https://github.com/zernonia/keypress/blob/main/app/router.options.ts) - based on the ssr context, map a new route.
-3. [`pages/user/[siteId]`](https://github.com/zernonia/keypress/tree/main/pages/user/%5BsiteId%5D) - this will now be your new router root
+1. [`server/middleware/subdomain.ts`](https://github.com/phonggnguyen/perfect-blog/blob/main/server/middleware/subdomain.ts) - check the current domain and set srr context.
+2. [`app/router.option.ts`](https://github.com/phonggnguyen/perfect-blog/blob/main/app/router.options.ts) - based on the ssr context, map a new route.
+3. [`pages/user/[siteId]`](https://github.com/phonggnguyen/perfect-blog/tree/main/pages/user/%5BsiteId%5D) - this will now be your new router root
 
 ## 🚀 Features
 
@@ -63,7 +63,7 @@ Yarn
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/zernonia/keypress.git
+   git clone https://github.com/phonggnguyen/perfect-blog.git
    ```
 2. Install NPM packages
    ```sh
@@ -105,7 +105,7 @@ Also, if you like my work, please buy me a coffee ☕😳
 
 ## 🔥 Contributors
 
-<a href="https://github.com/zernonia/keypress/graphs/contributors">
+<a href="https://github.com/phonggnguyen/perfect-blog/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=zernonia/keypress" />
 </a>
 

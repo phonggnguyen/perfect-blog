@@ -1,0 +1,1 @@
+{"version":3,"file":"url.b4db8f0f.js","sources":["../../../../composables/url.ts"],"sourcesContent":["export const useUrl = () => (process.dev ? \"http://localhost:3000\" : \"https://perfect-blog.vercel.app\")\n"],"names":[],"mappings":"AAAO,MAAM,SAAS,MAA+C;"}
