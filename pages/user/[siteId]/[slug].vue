@@ -19,7 +19,7 @@ const { data, pending } = useAsyncData(`posts-${params.slug}`, async () => {
 
 useCustomHead(
   computed(() => data.value?.title),
-  computed(() => (data.value?.body ? stripHtml(data.value?.body)?.result?.slice(0, 160) : undefined)),
+  computed(() => (data.value?.body ? stripHtml(data.value?.body)?.result?.slice(0, 160) : "")),
   computed(() => (data.value?.cover_img === "" ? `${url}/og/${params.slug}` : data.value?.cover_img))
 )
 

@@ -90,7 +90,6 @@ const { pending } = await useAsyncData(
 
 const isDrawerOpen = ref(false)
 
-useCustomHead("Write your post")
 definePageMeta({
   alias: "/write",
   middleware: "auth",
@@ -98,6 +97,11 @@ definePageMeta({
 </script>
 
 <template>
+  <Head>
+    <Title>
+      Write your post
+    </Title>
+  </Head>
   <div>
     <Loader v-if="pending"></Loader>
     <div v-else ref="el" class="flex flex-col mt-8">

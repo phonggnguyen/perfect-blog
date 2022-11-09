@@ -27,7 +27,7 @@
 
 KeyPress is an open-source blogging platform that focused on keyboard-first experience. It was inspired by Vercel's Platform Starter Kit.
 
-I always wanted to build a multi-tenant platform using [Nuxt3](https://v3.nuxtjs.org/), and I finally did it! - in `nuxt-rc11`.
+I always wanted to build a multi-tenant platform using [Nuxt3](https://v3.nuxtjs.org/), and I finally did it! - in `nuxt-rc13`.
 
 If you are interested to implement the same, checkout
 
@@ -92,22 +92,6 @@ Contributions are what make the open source community such an amazing place to b
 1. [Tiptap - Awesome editor](https://tiptap.dev/)
 1. [Vercel's Platform Starter Kit - Subdomain/Custom domain](https://github.com/vercel/platforms)
 1. [Vercel's new og generation](https://github.com/vercel/satori)
-
-## Author
-
-- Zernonia ([@zernonia](https://twitter.com/zernonia))
-
-Also, if you like my work, please buy me a coffee ☕😳
-
-<a href="https://www.buymeacoffee.com/zernonia" target="_blank">
-    <img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Logo" >
-  </a>
-
-## 🔥 Contributors
-
-<a href="https://github.com/phonggnguyen/perfect-blog/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=zernonia/keypress" />
-</a>
 
 ## 📜 License
 
