@@ -1,1 +1,0 @@
-import{a as o,e as t,m as n,p as s,o as l}from"./entry.35b9f3be.js";const d=["data-loading","disabled"],_=o({__name:"Button",props:{loading:Boolean},setup(e){return(a,r)=>(l(),t("button",s({"data-loading":e.loading,disabled:e.loading,class:"btn-loader"},a.$attrs),[n(a.$slots,"default")],16,d))}});export{_};
