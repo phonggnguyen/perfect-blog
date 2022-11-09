@@ -11,12 +11,13 @@ const CmdK = keys["Meta+K"]
 const Escape = keys["Escape"]
 const isVisible = useState("command-visible", () => false)
 
+watch(Escape, () => (isVisible.value = false))
 watch(CmdK, (v) => {
   if (v) {
     isVisible.value = !isVisible.value
   }
 })
-watch(Escape, () => (isVisible.value = false))
+
 
 const navAction = (path: string) => {
   router.push(path)
