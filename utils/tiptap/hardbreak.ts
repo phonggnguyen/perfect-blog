@@ -1,4 +1,4 @@
-import { Extension } from "@tiptap/core"
+import { Extension } from '@tiptap/core'
 
 export default Extension.create({
   addKeyboardShortcuts() {
@@ -8,7 +8,7 @@ export default Extension.create({
         () => commands.newlineInCode(),
         () => commands.createParagraphNear(),
         () => commands.liftEmptyBlock(),
-        () => commands.splitListItem("listItem"),
+        () => commands.splitListItem('listItem'),
         () => commands.splitBlock(),
       ])
 
@@ -31,9 +31,9 @@ export default Extension.create({
     }
 
     return {
-      Enter: defaultHandler,
-      "Shift-Enter": shiftEnter,
-      "Mod-Enter": modEnter,
+      'Enter': defaultHandler,
+      'Shift-Enter': shiftEnter,
+      'Mod-Enter': modEnter,
     }
   },
 })

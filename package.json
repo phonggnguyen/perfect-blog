@@ -3,19 +3,17 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "start": "node .output/server/index.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1",
-    "@antfu/eslint-config": "^0.27.0",
+    "@antfu/eslint-config": "^0.29.2",
+    "eslint": "^8.26.0",
     "@iconify-json/ic": "^1.1.9",
     "@iconify-json/mdi": "^1.1.9",
     "@nuxt/image-edge": "^1.0.0-27719579.87dcdf2",
-    "@nuxtjs/eslint-config-typescript": "^11.0.0",
     "@nuxtjs/supabase": "^0.1.25",
     "@unocss/nuxt": "^0.45.6",
     "@unocss/preset-icons": "^0.45.6",
@@ -26,8 +24,8 @@
     "@vueuse/core": "^9.1.0",
     "@vueuse/integrations": "^9.3.0",
     "@vueuse/nuxt": "^9.1.0",
-    "eslint": "^8.24.0",
-    "nuxt": "^3.0.0-rc.13"
+    "nuxt": "^3.0.0-rc.13",
+    "typescript": "^4.8.4"
   },
   "dependencies": {
     "@resvg/resvg-js": "^2.1.0",

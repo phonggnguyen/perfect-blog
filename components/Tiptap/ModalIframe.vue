@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Editor } from "@tiptap/core"
-import { PropType } from "vue"
+import type { Editor } from '@tiptap/core'
+import type { PropType } from 'vue'
 
 const props = defineProps({
   show: Boolean,
@@ -8,9 +8,10 @@ const props = defineProps({
 })
 const open = ref(props.show)
 
-const url = ref("")
+const url = ref('')
 const save = () => {
-  if (!url.value?.match(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi)) return
+  if (!url.value?.match(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi))
+    return
 
   props.editor
     .chain()
@@ -24,8 +25,9 @@ const save = () => {
 
 watch(open, () => {
   if (!open.value) {
-    const editorEl = document.querySelector(".content .ProseMirror") as HTMLDivElement
-    if (editorEl) editorEl.focus()
+    const editorEl = document.querySelector('.content .ProseMirror') as HTMLDivElement
+    if (editorEl)
+      editorEl.focus()
   }
 })
 </script>
@@ -33,16 +35,22 @@ watch(open, () => {
 <template>
   <Modal v-model:open="open">
     <div class="flex flex-col p-6">
-      <h2 class="text-3xl font-bold">Add iframe</h2>
+      <h2 class="text-3xl font-bold">
+        Add iframe
+      </h2>
 
       <div class="flex items-center my-6">
         <label for="url" class="mr-4 flex-shrink-0">URL :</label>
-        <input type="url" name="url" id="url" placeholder="https://supabase.com" v-model="url" />
+        <input id="url" v-model="url" type="url" name="url" placeholder="https://supabase.com">
       </div>
 
       <div class="flex justify-end">
-        <button class="btn-plain" @click="open = false">Cancel</button>
-        <Button class="btn-primary ml-2" @click="save">Save</Button>
+        <button class="btn-plain" @click="open = false">
+          Cancel
+        </button>
+        <Button class="btn-primary ml-2" @click="save">
+          Save
+        </Button>
       </div>
     </div>
   </Modal>

@@ -1,8 +1,8 @@
-import type { Profiles } from "~/utils/types"
-import type { Ref } from "vue"
-import { removeVietnameseTones } from "~/utils/functions";
+import type { Ref } from 'vue'
+import type { Profiles } from '~/utils/types'
+import { removeVietnameseTones } from '~/utils/functions'
 
-export const useProfile = () => useState<Profiles>("profile", () => null)
+export const useProfile = () => useState<Profiles>('profile', () => null)
 
 export const useProfileSave = (payload: Ref<Partial<Profiles>>) => {
   const user = useSupabaseUser()
@@ -11,33 +11,28 @@ export const useProfileSave = (payload: Ref<Partial<Profiles>>) => {
   const isSaving = ref(false)
 
   const save = async () => {
-    // validate input here (if any)
     isSaving.value = true
 
-    console.log("save profile settings", payload.value)
-    console.log("save profile user", user.value)
     const isFacebook = user.value?.app_metadata.provider === 'facebook'
-    console.log({ isFacebook })
     if (isFacebook) {
       payload.value.avatar_url = user.value?.user_metadata.avatar_url
       payload.value.username = removeVietnameseTones(user.value?.user_metadata.name)
-          .replaceAll(" ", "")
-          .toLowerCase()
+        .replaceAll(' ', '')
+        .toLowerCase()
     }
 
-    const { data } = await client
-      .from<Profiles>("profiles")
+    await client
+      .from<Profiles>('profiles')
       .upsert({ ...payload.value, id: user.value?.id })
       .single()
 
-    console.log({ data })
     isSaving.value = false
   }
 
   useMagicKeys({
     passive: false,
     onEventFired(e) {
-      if ((e.ctrlKey || e.metaKey) && e.key === "s" && e.type === "keydown") {
+      if ((e.ctrlKey || e.metaKey) && e.key === 's' && e.type === 'keydown') {
         e.preventDefault()
         save()
       }

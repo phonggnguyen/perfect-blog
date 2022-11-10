@@ -1,14 +1,14 @@
-import { Extension } from "@tiptap/core"
-import Suggestion from "@tiptap/suggestion"
+import { Extension } from '@tiptap/core'
+import Suggestion from '@tiptap/suggestion'
 
 // ref: https://tiptap.dev/experiments/commands
 export default Extension.create({
-  name: "commands",
+  name: 'commands',
 
   addOptions() {
     return {
       suggestion: {
-        char: "/",
+        char: '/',
         command: ({ editor, range, props }) => {
           props.command({ editor, range })
         },

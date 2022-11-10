@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { Profiles } from "~/utils/types"
 import { set } from '@vueuse/core'
+import type { Profiles } from '~/utils/types'
 
 const client = useSupabaseClient()
 const subdomain = useSubdomain()
 const profile = useSubdomainProfile()
 
-console.log("subdomain", subdomain.value)
 // this should fetch user's profiles and settings (if any)
-useAsyncData("profile", async () => {
+useAsyncData('profile', async () => {
   const { data, error } = await client
-    .from<Profiles>("profiles")
-    .select("*")
+    .from<Profiles>('profiles')
+    .select('*')
     .or(`username.eq.${subdomain.value}, subdomain.eq.${subdomain.value}`)
     .maybeSingle()
 
@@ -20,13 +19,15 @@ useAsyncData("profile", async () => {
 })
 
 definePageMeta({
-  layout: "user",
+  layout: 'user',
 })
 </script>
 
 <template>
   <div>
-    <NuxtPage v-if="profile"></NuxtPage>
-    <div class="text-4xl my-20 font-bold text-center" v-else>Page not found hehe</div>
+    <NuxtPage v-if="profile" />
+    <div v-else class="text-4xl my-20 font-bold text-center">
+      Page not found hehe
+    </div>
   </div>
 </template>

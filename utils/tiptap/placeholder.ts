@@ -1,6 +1,7 @@
 // 1. Import the extension
-import Placeholder from "@tiptap/extension-placeholder"
-import { NodeSelection, TextSelection } from "prosemirror-state"
+import Placeholder from '@tiptap/extension-placeholder'
+import type { NodeSelection } from 'prosemirror-state'
+import { TextSelection } from 'prosemirror-state'
 
 // 2. Overwrite the keyboard shortcuts
 export default Placeholder.extend({
@@ -9,9 +10,8 @@ export default Placeholder.extend({
       ...this.parent?.(),
       placeholder: ({ node, editor }) => {
         const selection = editor.state.selection as NodeSelection
-        if (selection instanceof TextSelection) {
-          return " Type '/' for commands"
-        }
+        if (selection instanceof TextSelection)
+          return ' Type \'/\' for commands'
       },
       includeChildren: true,
     }

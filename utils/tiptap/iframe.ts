@@ -1,5 +1,5 @@
 // ref: https://github.com/ueberdosis/tiptap/blob/9afadeb7fe368f95064f84424d6a3dd6cd85b43d/demos/src/Experiments/Embeds/Vue/iframe.ts
-import { mergeAttributes, Node } from "@tiptap/core"
+import { Node, mergeAttributes } from '@tiptap/core'
 
 export interface IframeOptions {
   allowFullscreen: boolean
@@ -8,7 +8,7 @@ export interface IframeOptions {
   }
 }
 
-declare module "@tiptap/core" {
+declare module '@tiptap/core' {
   interface Commands<ReturnType> {
     iframe: {
       /**
@@ -20,9 +20,9 @@ declare module "@tiptap/core" {
 }
 
 export default Node.create<IframeOptions>({
-  name: "iframe",
+  name: 'iframe',
 
-  group: "block",
+  group: 'block',
 
   atom: true,
 
@@ -30,7 +30,7 @@ export default Node.create<IframeOptions>({
     return {
       allowFullscreen: true,
       HTMLAttributes: {
-        class: "iframe-wrapper",
+        class: 'iframe-wrapper',
       },
     }
   },
@@ -53,16 +53,16 @@ export default Node.create<IframeOptions>({
   parseHTML() {
     return [
       {
-        tag: "iframe",
+        tag: 'iframe',
       },
     ]
   },
 
   renderHTML({ HTMLAttributes }) {
     return [
-      "div",
+      'div',
       this.options.HTMLAttributes,
-      ["iframe", mergeAttributes(HTMLAttributes, { frameborder: 10, tabindex: -1 })],
+      ['iframe', mergeAttributes(HTMLAttributes, { frameborder: 10, tabindex: -1 })],
     ]
   },
 
@@ -70,16 +70,15 @@ export default Node.create<IframeOptions>({
     return {
       setIframe:
         (options: { src: string }) =>
-        ({ tr, dispatch }) => {
-          const { selection } = tr
-          const node = this.type.create(options)
+          ({ tr, dispatch }) => {
+            const { selection } = tr
+            const node = this.type.create(options)
 
-          if (dispatch) {
-            tr.replaceRangeWith(selection.from, selection.to, node)
-          }
+            if (dispatch)
+              tr.replaceRangeWith(selection.from, selection.to, node)
 
-          return true
-        },
+            return true
+          },
     }
   },
 })

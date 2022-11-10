@@ -1,24 +1,28 @@
 <script lang="ts" setup>
-const user = useSupabaseUser()
+import { useUrl } from '~/composables/url'
+
+const user = useSubdomainProfile()
 </script>
 
 <template>
-  <div class="p-4 bg-light-300 min-h-screen w-full flex flex-col">
+  <div class="p-4 bg-light-200 min-h-screen w-full flex flex-col">
     <div class="max-w-screen-lg mx-auto w-full">
       <nav class="flex justify-between items-center">
         <NuxtLink to="/">
-          <Logo class="w-12 h-12"></Logo>
+          <Logo class="w-8 h-8" />
         </NuxtLink>
 
         <div class="flex items-center">
-          <Command class="mr-4"></Command>
-          <NuxtLink rel="noopener" :to="`https://meetoon.co/login`" v-if="!user">Login</NuxtLink>
+          <Command class="mr-4" />
+          <NuxtLink v-if="!user" rel="noopener" :to="`${useUrl}/login`">
+            Login
+          </NuxtLink>
           <div>
             <NuxtImg
-              v-if="user?.user_metadata?.avatar_url"
+              v-if="user?.avatar_url"
               class="w-10 h-10 rounded-full"
-              :src="user?.user_metadata?.avatar_url"
-              :alt="user?.user_metadata?.full_name"
+              :src="user?.avatar_url"
+              :alt="user?.full_name"
             />
           </div>
         </div>
@@ -28,7 +32,7 @@ const user = useSupabaseUser()
         <slot />
       </div>
 
-      <Footer></Footer>
+      <Footer />
     </div>
   </div>
 </template>
