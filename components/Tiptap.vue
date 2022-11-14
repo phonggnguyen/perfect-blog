@@ -1,27 +1,27 @@
 <script lang="ts" setup>
-import { useEditor, EditorContent } from "@tiptap/vue-3"
-import StarterKit from "@tiptap/starter-kit"
-import Underline from "@tiptap/extension-underline"
-import Image from "@tiptap/extension-image"
-import Focus from "@tiptap/extension-focus"
-import Commands from "~/utils/tiptap/commands"
-import suggestion from "~/utils/tiptap/suggestion"
-import HardBreak from "~/utils/tiptap/hardbreak"
-import Code from "~/utils/tiptap/code"
-import Link from "~/utils/tiptap/link"
-import Placeholder from "~/utils/tiptap/placeholder"
-import Upload from "~/utils/tiptap/upload"
-import Iframe from "~/utils/tiptap/iframe"
-import Move from "~/utils/tiptap/move"
+import { EditorContent, useEditor } from '@tiptap/vue-3'
+import StarterKit from '@tiptap/starter-kit'
+import Underline from '@tiptap/extension-underline'
+import Image from '@tiptap/extension-image'
+import Focus from '@tiptap/extension-focus'
+import Commands from '~/utils/tiptap/commands'
+import suggestion from '~/utils/tiptap/suggestion'
+import HardBreak from '~/utils/tiptap/hardbreak'
+import Code from '~/utils/tiptap/code'
+import Link from '~/utils/tiptap/link'
+import Placeholder from '~/utils/tiptap/placeholder'
+import Upload from '~/utils/tiptap/upload'
+import Iframe from '~/utils/tiptap/iframe'
+import Move from '~/utils/tiptap/move'
 
 const props = defineProps<{
   modelValue: string
   editable?: boolean
 }>()
-const emit = defineEmits(["update:modelValue"])
+const emit = defineEmits(['update:modelValue'])
 
 const editor = useEditor({
-  content: props.modelValue ?? "",
+  content: props.modelValue ?? '',
   extensions: [
     Link,
     StarterKit,
@@ -40,7 +40,7 @@ const editor = useEditor({
   ],
   editable: props.editable ?? false,
   onUpdate(props) {
-    emit("update:modelValue", props.editor.getHTML())
+    emit('update:modelValue', props.editor.getHTML())
   },
 })
 
@@ -48,15 +48,16 @@ watch(
   () => props.modelValue,
   (newValue) => {
     const isSame = editor.value?.getHTML() === newValue
-    if (isSame) return
+    if (isSame)
+      return
     editor.value?.commands.setContent(newValue, false)
-  }
+  },
 )
 </script>
 
 <template>
   <div>
-    <TiptapBubble :editor="editor"></TiptapBubble>
+    <TiptapBubble :editor="editor" />
     <EditorContent class="content" :editor="editor" />
   </div>
 </template>
